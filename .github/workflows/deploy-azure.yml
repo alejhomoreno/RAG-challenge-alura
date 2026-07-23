@@ -25,7 +25,7 @@ jobs:
 
       - name: Empaquetar la aplicación
         run: |
-          zip -r release.zip . -x "venv/*" "__pycache__/*" ".git/*" "db/chroma/*"
+          zip -r release.zip . -x "venv/*" "__pycache__/*" ".git/*"
 
       - name: Desplegar en Azure mediante cURL
         run: |
