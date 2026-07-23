@@ -1,7 +1,11 @@
 streamlit
 langchain-chroma
 langchain-cohere
+langchain-community
+langchain-text-splitters
 cohere
 python-dotenv
-pypdf
+pymupdf
 openpyxl
+pandas
+EOF
