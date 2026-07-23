@@ -16,12 +16,11 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# --- 2. VERIFICACIÓN E INGESTA AUTOMÁTICA ---
-if not os.path.exists("db/chroma") or not os.listdir("db/chroma"):
-    st.warning("Base de datos no detectada. Inicializando proceso de ingesta automático...")
-    import ingestion  # Ejecuta la ingesta la primera vez
-    st.success("¡Ingesta completada con éxito! Recarga la página.")
-
+# --- 2. VERIFICACIÓN SEGURA DE BASE DE DATOS ---
+DB_PATH = "db/chroma"
+if not os.path.exists(DB_PATH) or not os.listdir(DB_PATH):
+    st.info("⚠️ La base de datos vectorial no está presente. Por favor, asegúrate de incluirla en el despliegue o ejecutar la ingesta previamente.")
+    
 # --- 3. INICIALIZACIÓN DE CACHÉ Y RECURSOS ---
 @st.cache_resource
 def iniciar_sistemas():
