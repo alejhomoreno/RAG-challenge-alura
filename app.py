@@ -8,7 +8,7 @@ from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 
-# --- CONFIGURACIÓN DE PÁGINA ---
+# --- 1. CONFIGURACIÓN DE PÁGINA (SIEMPRE PRIMERO) ---
 st.set_page_config(
     page_title="Mercado Central 24h — Asistente Operativo",
     page_icon="🛒",
@@ -16,7 +16,13 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# --- INICIALIZACIÓN DE CACHÉ Y RECURSOS ---
+# --- 2. VERIFICACIÓN E INGESTA AUTOMÁTICA ---
+if not os.path.exists("db/chroma") or not os.listdir("db/chroma"):
+    st.warning("Base de datos no detectada. Inicializando proceso de ingesta automático...")
+    import ingestion  # Ejecuta la ingesta la primera vez
+    st.success("¡Ingesta completada con éxito! Recarga la página.")
+
+# --- 3. INICIALIZACIÓN DE CACHÉ Y RECURSOS ---
 @st.cache_resource
 def iniciar_sistemas():
     load_dotenv()
