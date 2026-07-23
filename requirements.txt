@@ -1,0 +1,7 @@
+streamlit
+langchain-chroma
+langchain-cohere
+cohere
+python-dotenv
+pypdf
+openpyxl
