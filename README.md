@@ -1,7 +1,6 @@
 # 🛒 Mercado Central 24h - Asistente Inteligente Operativo & RAG
 
-![Uploading Screenshot From 2026-07-27 18-05-19.png…]()
-
+<p align="center"><img src="./image.png" width="300"></p>
 
 > **Supermercado moderno de operación continua (24/7)** que integra la experiencia de tienda física con servicios de delivery y app propia. 
 
