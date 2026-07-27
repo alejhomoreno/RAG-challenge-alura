@@ -1,5 +1,8 @@
 # 🛒 Mercado Central 24h - Asistente Inteligente Operativo & RAG
 
+![Uploading Screenshot From 2026-07-27 18-05-19.png…]()
+
+
 > **Supermercado moderno de operación continua (24/7)** que integra la experiencia de tienda física con servicios de delivery y app propia. 
 
 Este repositorio contiene la aplicación web inteligente basada en **Streamlit** y motores de Recuperación Aumentada por Generación (**RAG**), diseñada para asistir en la gestión operativa, consultas sobre políticas, normativas internas, inventarios y atención al cliente de **Mercado Central 24h**.
